@@ -84,3 +84,45 @@ Mitten-elementet är double size: dela med 6 i stället
 Varje element: (200px - 4*5px) / 6 = 180px / 6 = 30px
 Mitten-elementet får 60px
 */
+
+
+/* Figur 5h från övningarna */
+.cross {
+	/* Flex container för "cross-row" */
+	display: flex;
+	flex-direction: column;
+	width: 12em;
+	height: 12em;
+	/* border: 1px solid rgb(121, 26, 26); */
+}
+.cross-row {
+	/* Flex container för sina children OCH flex item för "cross" */
+	flex-grow: 1;
+	display: flex;
+	flex-direction: row;
+}
+.cross-row > * {
+	/* Flex item för "cross-row" */
+	flex-grow: 1;
+}
+.light { background-color: rgb(239, 172, 172); }
+.medium { background-color: rgb(221, 78, 78); }
+.dark { background-color: rgb(158, 39, 39); }
+
+
+/* Centrera innehåll */
+.center-content {
+	width: 20em;
+	height: 8em;
+	margin: 0.5em;
+	background-color: rgb(168, 232, 168);
+
+	display: flex;
+	/* flex-direction: row; */
+	justify-content: center;  /* centrera längs "flex axis" */
+	align-items: center;  /* centrera längs "cross axis" */
+}
+.content {
+	background-color: rgb(74, 170, 74);
+	width: 8em;
+}
