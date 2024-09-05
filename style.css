@@ -1,0 +1,76 @@
+
+nav {
+	background-color: rgb(2, 18, 1);
+	color: rgb(240, 253, 238);
+	margin-bottom: 1em;
+}
+
+.row{
+	display: flex;
+	gap: 3em;  /* gap fungerar som MARGIN mellan flex-items */
+	/* margin: 2em; */
+}
+.column {
+	display: flex;
+	flex-direction: column;
+}
+.row, .column, .menu, .submenu {
+	border: 1px solid rgb(2, 18, 1);
+}
+.row:hover, .column:hover, .menu:hover, .submenu:hover {
+	/* För att kunna se hur stora elementen är */
+	border: 1px solid rgb(58, 139, 28);
+}
+.menu {
+	padding: 1em;
+	/* Använd en "test-kantlinje" för att se hur stora elementen är */
+	/* border: 2px dotted pink; */
+}
+.submenu {
+	padding: 0.5em;
+	max-width: 8em;
+	/* border: 2px dotted rgb(140, 210, 192); */
+}
+.heading {
+	font-weight: bold;
+}
+
+
+.flex-row {
+	display: flex;
+	flex-direction: row;
+	border: 1px solid black;
+	gap: 0.2em;
+	margin-bottom: 0.2em;
+}
+.flex-row > * {
+	border: 1px solid black;
+	padding: 1em;
+	background-color: rgb(222, 170, 71);
+	flex-grow: 1;
+	flex-basis: 0;
+	text-align: center;
+}
+.flex-row .double {
+	flex-grow: 2;
+	background-color: rgb(129, 172, 226);
+}
+.flex-row .basis {
+	flex-grow: 0;
+	flex-basis: 3em;  /* samma sak som "width" */
+	/* flex: 0 0 3em; flex-grow, flex-shrink, flex-basis */
+	background-color: rgb(211, 90, 90);
+}
+
+/* Exempel
+Tillgängligt: 200px
+5 element ska tryckas in
+4 gap emellan, varje gap är 5px
+Varje element får: (200px - 4*5px) / 5 = 180px / 5 = 36px
+
+Mitten-elementet är double size: dela med 6 i stället
+Varje element: (200px - 4*5px) / 6 = 180px / 6 = 30px
+Mitten-elementet får 60px
+
+
+*/
